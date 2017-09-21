@@ -134,7 +134,7 @@ spec:
     spec:
       containers:
       - name: microservice-vote
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         env:
 {{ if ne .Values.test true }}
         - name: MB_KEYSTORE_PASSWORD
